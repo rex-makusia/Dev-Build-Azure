@@ -28,3 +28,4 @@ address_space = ["10.123.0.0/16"]
 tags = {
 environment = "dev"
 }
+}
