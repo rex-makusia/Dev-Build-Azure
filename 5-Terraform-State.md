@@ -22,6 +22,7 @@ resource "azurerm_resource_group" "mtc-rg" {
 ```
 - To view the entire state file
 ```bash
+$ ./terraform.exe show 
 # azurerm_resource_group.mtc-rg:
 resource "azurerm_resource_group" "mtc-rg" {
     id       = "/subscriptions/fc85b008-38f6-4afe-9890-b914a964aa24/resourceGroups/mtc-resources"
