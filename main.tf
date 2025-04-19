@@ -16,4 +16,5 @@ resource "azurerm_resource_group" "mtc-rg" {
   location = "Australia East"
   tags = {
       environment = "dev"
+  }
 }
