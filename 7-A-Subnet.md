@@ -10,4 +10,5 @@ resource "azurerm_subnet" "mtc-subnet" {
   address_prefixes     = ["10.123.1.0/24"]
 }
 ```
-- Run the ```terraform fmt``` and ```terraform apply```
+- Run the ```terraform fmt``` and ```terraform plan```
+- Go ahead now to run ```terraform apply -auto-approve
