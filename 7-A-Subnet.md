@@ -46,3 +46,10 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 Admin@SEA-DEV MINGW64 ~/Documents/Vault/Dev-Build-Azure (main)
 $
 ```
+- Verify again with the ```terraform state list``` command
+```bash
+$ ./terraform.exe state list
+azurerm_resource_group.mtc-rg
+azurerm_subnet.mtc-subnet
+azurerm_virtual_network.mtc-vn
+```
