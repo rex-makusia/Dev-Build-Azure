@@ -1,7 +1,7 @@
 # A Subnet 
 
 - Review the [Azure Subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) Resource on the Terraform Registry
-- Adding the resource into the ```main.tf`` file
+- Adding the resource into the ```main.tf``` file
 ```bash
 resource "azurerm_subnet" "mtc-subnet" {
   name                 = "mtc-subnet"
