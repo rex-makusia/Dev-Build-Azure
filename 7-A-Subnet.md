@@ -11,4 +11,4 @@ resource "azurerm_subnet" "mtc-subnet" {
 }
 ```
 - Run the ```terraform fmt``` and ```terraform plan```
-- Go ahead now to run ```terraform apply -auto-approve
+- Go ahead now to run ```terraform apply -auto-approve```
