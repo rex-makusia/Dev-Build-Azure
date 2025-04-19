@@ -21,3 +21,24 @@ or ```az login --use-device-code``` by pasting the URL on the browser and device
 
 - Install the Terraform Extension on VS Code (```Terrform by Anton Kulikov```)
 ![VS-Code Terrform Plugin](./assets/Terrform-plugin.png)
+
+- Verify with ```az account show``` command
+```bash
+$ az account show
+{
+  "environmentName": "AzureCloud",
+  "homeTenantId": "6b9ee64f-5016-40ce-a4fd-5a6befae31ef",
+  "id": "7d6101fe-5829-40e8-bb5e-e7e33285d25e",
+  "isDefault": true,
+  "managedByTenants": [],
+  "name": "CS-SUBM-0495",
+  "state": "Enabled",
+  "tenantDefaultDomain": "t006.gdazcs.com",
+  "tenantDisplayName": "go deploy Ltd (t006.gdazcs.com)",
+  "tenantId": "6b9ee64f-5016-40ce-a4fd-5a6befae31ef",
+  "user": {
+    "name": "student6Z7HU@t006.gdazcs.com",
+    "type": "user"
+  }
+}
+```
