@@ -41,8 +41,8 @@ resource "azure_network_security_group "mtc-sg" {
   name = "mtc-sg"
   location = azurerm_resource_group.mtc-rg.location
   resource_group_name = azurerm_resource_group.mtc-rg.name
-  tags = {
+  
+tags = {
 environment = "dev"
 }
 }
-
