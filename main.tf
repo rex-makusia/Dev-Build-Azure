@@ -36,3 +36,13 @@ resource "azurerm_subnet" "mtc-subnet" {
   virtual_network_name = azurerm_virtual_network.mtc-vn.name
   address_prefixes = ["10.123.1.0/24"]
 }
+
+resource "azure_network_security_group "mtc-sg" {
+  name = "mtc-sg"
+  location = azurerm_resource_group.mtc-rg.location
+  resource_group_name = azurerm_resource_group.mtc-rg.name
+  tags = {
+environment = "dev"
+}
+}
+
