@@ -110,3 +110,50 @@ Apply complete! Resources: 0 added, 0 changed, 2 destroyed.
 Admin@SEA-DEV MINGW64 ~/Documents/Vault/Dev-Build-Azure (main)
 $
 ```
+- Re-create the resources again
+```bash
+$ ./terraform.exe apply -auto-approve
+
+Terraform used the selected providers to generate the following
+execution plan. Resource actions are indicated with the following       
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_resource_group.mtc-rg will be created
+  + resource "azurerm_resource_group" "mtc-rg" {
+      + id       = (known after apply)
+      + location = "australiaeast"
+      + name     = "mtc-resources"
+      + tags     = {
+          + "environment" = "dev"
+        }
+    }
+
+  # azurerm_virtual_network.mtc-vn will be created
+  + resource "azurerm_virtual_network" "mtc-vn" {
+      + address_space       = [
+          + "10.123.0.0/16",
+        ]
+      + dns_servers         = (known after apply)
+      + guid                = (known after apply)
+      + id                  = (known after apply)
+      + location            = "australiaeast"
+      + name                = "mtc-network"
+      + resource_group_name = "mtc-resources"
+      + subnet              = (known after apply)
+      + tags                = {
+          + "environment" = "dev"
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+azurerm_resource_group.mtc-rg: Creating...
+azurerm_resource_group.mtc-rg: Creation complete after 7s [id=/subscriptions/fc85b008-38f6-4afe-9890-b914a964aa24/resourceGroups/mtc-resources] 
+azurerm_virtual_network.mtc-vn: Creating...
+azurerm_virtual_network.mtc-vn: Creation complete after 10s [id=/subscriptions/fc85b008-38f6-4afe-9890-b914a964aa24/resourceGroups/mtc-resources/providers/Microsoft.Network/virtualNetworks/mtc-network]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```
+
