@@ -20,3 +20,4 @@ Select a subscription and tenant (Type a number or Enter for no changes): 1
 or ```az login --use-device-code``` by pasting the URL on the browser and device code to login.
 
 - Install the Terraform Extension on VS Code (```Terrform by Anton Kulikov```)
+![VS-Code Terrform Plugin](./assets/Terrform-plugin.png)
