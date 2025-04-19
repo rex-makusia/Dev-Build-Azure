@@ -10,3 +10,10 @@ terraform {
 provider "azurerm" {
   feature {}
 }
+
+resource "azurerm_resource_group" "mtc-rg" {
+  name     = "mtc-resourcs"
+  location = "Australia East"
+  tags = {
+      environment = "dev"
+}
