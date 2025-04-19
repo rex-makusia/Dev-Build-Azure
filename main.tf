@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "azurerm" {
-  feature {}
+  features {}
 }
 
 resource "azurerm_resource_group" "mtc-rg" {
