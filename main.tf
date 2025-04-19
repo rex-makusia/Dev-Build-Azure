@@ -12,9 +12,15 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "mtc-rg" {
-  name     = "mtc-resourcs"
+  name     = "mtc-resources"
   location = "Australia East"
   tags = {
       environment = "dev"
   }
+}
+
+resource "azurerm_virtual" "mtc-vn" {
+name = "mtc-network"
+resource_group_name = azurerm_resource_group.mtc-rg.name
+location = azurerm_resource_group.mtc-rg.location
 }
