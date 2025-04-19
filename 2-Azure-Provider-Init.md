@@ -6,5 +6,7 @@
 
 ## Workflow
 
-- Run a  ```Terrform fmt```
+- Run a  ```terrform fmt``` as a way to format your configuration before apply
+- Go to a ```terraform init``` to initalize the project.
+
 
