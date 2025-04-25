@@ -84,7 +84,7 @@ resource_group_name = azure_resource_group.name
 
 ip_configuration  {
   name = "internal"
-  subnet_id = azure_subnet.mtc-subnet.id
+  subnet_id = azurerm_subnet.mtc-subnet.id
   private_ip_address_allocation = "Dyanamic"
   public_ip_address_id = azurerm_public_ip.mtc-ip.id
 
