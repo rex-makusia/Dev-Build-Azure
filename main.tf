@@ -94,5 +94,3 @@ ip_configuration  {
   }
 }
 
-}
-
