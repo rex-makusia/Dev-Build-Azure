@@ -94,3 +94,14 @@ ip_configuration  {
   }
 }
 
+resource "azurerm_linux_virtual_machine" "mtc-vm"{
+ name = "mtc-vm"
+resource_group_name = azurerm_resource_group.mtc-rg.name
+location = azurerm_resource_group.mtc-rg.location
+size = "Standard_B1s"
+admin_username = "adminuser"
+network_interface_ids = [azurerm_network_interface.mtc-nic.id] 
+tags = {
+  environment = "dev"
+}
+
