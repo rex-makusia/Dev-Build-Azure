@@ -80,7 +80,7 @@ resource "azurerm_public_ip" "mtc-ip" {
 resource "azurerm_network_interface" "mtc-nic" {
 name = "mtc-nic"
 location = azurerm_resource_group.mtc-rg.location
-resource_group_name = azurerm_resource_group.name
+resource_group_name = azurerm_resource_group.mtc-rg.name
 
 ip_configuration  {
   name = "internal"
