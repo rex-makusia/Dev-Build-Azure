@@ -625,3 +625,75 @@ azurerm_linux_virtual_machine.mtc-vm: Creation complete after 55s [id=/subscript
 
 Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
 ```
+```HCL
+$ ./terraform state show azurerm_linux_virtual_machine.mtc-vm
+# azurerm_linux_virtual_machine.mtc-vm:
+resource "azurerm_linux_virtual_machine" "mtc-vm" {
+    admin_username                  = "adminuser"
+    allow_extension_operations      = true
+    availability_set_id             = null
+    computer_name                   = "mtc-vm"
+    dedicated_host_group_id         = null
+    dedicated_host_id               = null
+    disable_password_authentication = true
+    edge_zone                       = null
+    encryption_at_host_enabled      = false
+    eviction_policy                 = null
+    extensions_time_budget          = "PT1H30M"
+    id                              = "/subscriptions/450780e2-c7f3-4798-a2e3-6ce41665137e/resourceGroups/mtc-resources/providers/Microsoft.Compute/virtualMachines/mtc-vm"
+    license_type                    = null
+    location                        = "australiaeast"
+    max_bid_price                   = -1
+    name                            = "mtc-vm"
+    network_interface_ids           = [
+        "/subscriptions/450780e2-c7f3-4798-a2e3-6ce41665137e/resourceGroups/mtc-resources/providers/Microsoft.Network/networkInterfaces/mtc-nic",
+    ]
+    patch_mode                      = "ImageDefault"
+    platform_fault_domain           = -1
+    priority                        = "Regular"
+    private_ip_address              = "10.123.1.4"
+    private_ip_addresses            = [
+        "10.123.1.4",
+    ]
+    provision_vm_agent              = true
+    proximity_placement_group_id    = null
+    public_ip_address               = "13.75.129.27"
+    public_ip_addresses             = [
+        "13.75.129.27",
+    ]
+    resource_group_name             = "mtc-resources"
+    secure_boot_enabled             = false
+    size                            = "Standard_B1s"
+    source_image_id                 = null
+    tags                            = {
+        "environment" = "dev"
+    }
+    user_data                       = null
+    virtual_machine_id              = "d75349bb-6430-4544-a364-f788bceec68b"
+    virtual_machine_scale_set_id    = null
+    vtpm_enabled                    = false
+    zone                            = null
+
+    admin_ssh_key {
+        public_key = <<-EOT
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkgM04DzJ9mDY/pKf5kOKLI2KQbnGuCi9uRtJ4KjqqnXVj/CocMFxYAIFpA59br0JiaL+gLtVPFRP2MgrpCQdjHPYvq9oJvEPygr8Y/FgBh5dy6TB/+tTf1Tiab/5GR43voEsq+1mAefHGc/5/FLjVQJhNakfdVJEtIMLUKOSKbFB6DjkA66btD5QCgpRYK5ubLu1m1dADUqj1Lf12quAJSqrdeSRvYCf1RXfFLTk7Hd8J43hTFoBzSQcmXuGDGODoWUO7IWypN7aNAk6IMapU8WbD6FEeNVxCnqJJJVQ+NFpxSFVkrDVeV754aGk/0sXoYWgxBX6fdXTJDYI0aLxe6DYpfi5DLDm6olwF3tFwrVrFeAS31P2k1yDYgIEsxo+uzZklz1Zi30m39HuS2NBYoQFsgKjZQ/pS6F3sA5IGdXCi7QniRXfBxWF0LwsAObqdEvknYIwusaEtx+dnR/tefvme26+9A+WqLmnETgkkjb7mNxitvRT4Mabgek4vsa8= Admin@SEA-DEV
+        EOT
+        username   = "adminuser"
+    }
+
+    os_disk {
+        caching                   = "ReadWrite"
+        disk_encryption_set_id    = null
+        disk_size_gb              = 30
+        name                      = "mtc-vm_OsDisk_1_3deb72312bbb4acc8ebfc0d309352353"  
+        storage_account_type      = "Standard_LRS"
+        write_accelerator_enabled = false
+    }
+
+    source_image_reference {
+        offer     = "UbuntuServer"
+        publisher = "Canonical"
+        sku       = "18.04-LTS"
+        version   = "latest"
+    }
+```
