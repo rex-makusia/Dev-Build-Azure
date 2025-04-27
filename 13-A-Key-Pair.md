@@ -737,4 +737,11 @@ To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
 adminuser@mtc-vm:~$
+adminuser@mtc-vm:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 18.04.6 LTS
+Release:        18.04
+Codename:       bionic
+adminuser@mtc-vm:~$
 ```
