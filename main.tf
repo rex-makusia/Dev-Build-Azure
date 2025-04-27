@@ -104,4 +104,4 @@ network_interface_ids = [azurerm_network_interface.mtc-nic.id]
 tags = {
   environment = "dev"
 }
-
+}
