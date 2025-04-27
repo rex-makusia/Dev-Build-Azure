@@ -697,3 +697,44 @@ resource "azurerm_linux_virtual_machine" "mtc-vm" {
         version   = "latest"
     }
 ```
+- ssh  login
+```
+$ ssh -i ~/.ssh/id_mtc adminuser@13.75.129.27
+The authenticity of host '13.75.129.27 (13.75.129.27)' can't be established.
+ED25519 key fingerprint is SHA256:1AJcXqPbQStm+QVP3U0WL7uie1jug30I8z0vuudw0oY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yesWarning: Permanently added '13.75.129.27' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 5.4.0-1109-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Apr 27 12:41:36 UTC 2025
+
+  System load:  0.08              Processes:           105
+  Usage of /:   4.5% of 28.89GB   Users logged in:     0
+  Memory usage: 20%               IP address for eth0: 10.123.1.4       
+  Swap usage:   0%
+
+Expanded Security Maintenance for Infrastructure is not enabled.        
+
+0 updates can be applied immediately.
+
+Enable ESM Infra to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the      
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by    
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+adminuser@mtc-vm:~$
+```
