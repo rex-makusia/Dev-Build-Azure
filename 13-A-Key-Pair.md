@@ -1,5 +1,12 @@
 # A Key Pair
 Create a SSH Key Pair that will be used by the Linux Virtual  Machine we created and we can perform ssh functions
+- Sample SSH Configuration
+```HCL
+ admin_ssh_key {
+    username   = "adminuser"
+    public_key = file("~/.ssh/id_rsa.pub")
+  }
+```
 - Run a ```ssh-key -t rsa``` on a our terminal
 ```Bash
 Generating public/private rsa key pair.
