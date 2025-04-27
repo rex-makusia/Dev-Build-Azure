@@ -1,7 +1,7 @@
 # A Key Pair
 Create a SSH Key Pair that will be used by the Linux Virtual  Machine we created and we can perform ssh functions
 - Run a ```ssh-key -t rsa``` on a our terminal
-``Bash
+```Bash
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/Admin/.ssh/id_rsa): 
 Created directory '/c/Users/Admin/.ssh'.
