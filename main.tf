@@ -102,14 +102,16 @@ resource "azurerm_linux_virtual_machine" "mtc-vm" {
   admin_username        = "adminuser"
   network_interface_ids = [azurerm_network_interface.mtc-nic.id]
 
-  admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("~/.ssh/id_mtc.pub")
+content_data = filebase64("customdata.tpl")
+
+admin_ssh_key {
+  username   = "adminuser"
+  public_key = file("~/.ssh/id_mtc.pub")
   }
 
-  os_disk {
-    caching              = "ReadWrite"
-    storage_account_type = "Standard_LRS"
+os_disk {
+  caching              = "ReadWrite"
+  storage_account_type = "Standard_LRS"
   }
 
   source_image_reference {
