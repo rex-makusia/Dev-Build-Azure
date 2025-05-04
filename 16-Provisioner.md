@@ -7,3 +7,13 @@ or other infrastructure objects for service.
 ```HCL
 $ terraform apply -replace auzrerm_linux_virtual_machine.mtc-vm
 ```
+Fix ssh
+```bash
+Admin@SEA-DEV MINGW64 ~/.ssh
+$ eval "$(ssh-agent -s)"
+Agent pid 2673
+
+Admin@SEA-DEV MINGW64 ~/.ssh
+$ ssh-add ~/.ssh/id_mtc
+Identity added: /c/Users/Admin/.ssh/id_mtc (Admin@SEA-DEV)
+```
