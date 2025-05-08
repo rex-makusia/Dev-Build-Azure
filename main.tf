@@ -125,7 +125,7 @@ provisioner "local-exec" {
   command = templatefile("windows-ssh-script.tpl", {
     hostname = self.public_ip_address,
     user = "adminuser",
-    identityfile = "~/.ssh/id-mtc"
+    identityfile = "~/.ssh/id_mtc"
   })
 interpreter = ["Powershell", "-Command"]
 }
