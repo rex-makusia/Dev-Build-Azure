@@ -122,7 +122,7 @@ os_disk {
   }
 
 provisioner "local-exec" {
-  command = templatefile("windows-ssh-script.tpl", {
+  command = templatefile("${var.host_os}-ssh-script.tpl", {
     hostname = self.public_ip_address,
     user = "adminuser",
     identityfile = "~/.ssh/id_mtc"
