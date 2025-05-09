@@ -127,7 +127,7 @@ provisioner "local-exec" {
     user = "adminuser",
     identityfile = "~/.ssh/id_mtc"
   })
-interpreter = ["Powershell", "-Command"]
+interpreter = ["Powershell", "-Command"]["bash", "-c"]
 }
 
 tags = {
