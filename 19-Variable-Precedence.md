@@ -15,8 +15,9 @@ $ ./terraform console --var="host_os=linux"
 > var.host_os
 "linux"
 >
-```
+
 $ ./terraform console --var-file="osx.tfvars"
 > var.host_os
 "osx"
 >
+```
