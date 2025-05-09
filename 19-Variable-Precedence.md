@@ -8,3 +8,15 @@ $ ./terraform console
 "windows"
 >
 ```
+- We can use these configuration to utlized the ```tfvars``` default
+```hcl
+Admin@SEA-DEV MINGW64 /c/Vault/Dev-Build-Azure (main)
+$ ./terraform console --var="host_os=linux"
+> var.host_os
+"linux"
+>
+```
+$ ./terraform console --var-file="osx.tfvars"
+> var.host_os
+"osx"
+>
