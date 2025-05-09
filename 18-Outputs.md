@@ -8,7 +8,7 @@ output "instance_ip_addr" {
   value = aws_instance.server.private_ip
 }
 ```
-- State show
+- Terraform State show
 ```hcl
 $ ./terraform state show data.azurerm_public_ip.mtc-ip-data
 # data.azurerm_public_ip.mtc-ip-data:
